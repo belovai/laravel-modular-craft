@@ -21,18 +21,22 @@ shouldn't be installed.
 
 ## Installing
 
-Copy this skill's folder into your project's Claude Code skills
-directory:
+Clone the repo directly into your project's Claude Code skills directory:
 
 ```bash
-cp -r laravel-modular-craft /path/to/your-project/.claude/skills/laravel-modular-craft
+git clone https://github.com/belovai/laravel-modular-craft.git \
+  .claude/skills/laravel-modular-craft
+```
+
+Or, if you prefer a one-off copy without the git history:
+
+```bash
+curl -L https://github.com/belovai/laravel-modular-craft/archive/refs/heads/main.tar.gz \
+  | tar -xz --strip-components=1 -C .claude/skills/laravel-modular-craft
 ```
 
 Claude Code discovers any `SKILL.md` under `.claude/skills/*/`
-automatically — no further configuration needed. To make it available
-across every project instead of one at a time, install it as a plugin
-from a marketplace that indexes this repository, following your Claude
-Code version's current plugin-installation instructions.
+automatically — no further configuration needed.
 
 ## The architecture, in one paragraph
 
